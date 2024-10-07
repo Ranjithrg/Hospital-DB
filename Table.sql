@@ -4,7 +4,7 @@ use HMS;
 /* ======================= TABLES ========================*/
 
 CREATE TABLE Patient(
-ep int  NOT NULL,
+ep int  NOT NULL auto_increment,
 email varchar(30) NOT NULL,
 name varchar(50) NOT NULL,
 address varchar(60) NOT NULL,
