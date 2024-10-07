@@ -1,6 +1,8 @@
 create database HMS;
 use HMS;
 
+/* ======================= TABLES ========================*/
+
 CREATE TABLE Patient(
 ep int  NOT NULL,
 email varchar(30) NOT NULL,
