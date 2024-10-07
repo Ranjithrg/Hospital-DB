@@ -19,7 +19,7 @@ update Diagnose set doctor = "ranjithrg10" where appt = 2;
 SELECT  ADDDATE("2019-01-16",interval 10 day);
 SELECT ADDTIME("2019-01-15 09:00:00", "45");
 
--- Find Patient email with exactly 4-character names
+-- Find Patient email with exactly 3-character names
 
 select *
 from patient
@@ -70,6 +70,11 @@ union all
   select doctor from Diagnose 
   right join Doctor
   on Diagnose.doctor = Doctor.password  ;
+
+/*======================== Using Subquery by finding Average amount and filter by amount greater than average amoun======================*/
+select  billid from bill 
+  where billamount>
+  (select avg(billamount) from bill);
 
 /*======================== Retrieve bill by using Partition and order by Rank,Dense Rank, Row Number ======================*/
 
