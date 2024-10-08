@@ -9,6 +9,14 @@ select address, count(*) as number
 from Patient
 group by address;
 
+/*======================== Retrieve Specified column in Patient table ======================*/
+ select distinct email from Patient;
+
+/*======================== Retrieve only limited number of records ======================*/
+select * from Patient
+  where gender ='male'
+limit 3;
+
 -- Modifiying the values
 
 update Diagnose set doctor = "ranjithrg10" where appt = 1;
